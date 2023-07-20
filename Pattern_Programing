@@ -42,4 +42,34 @@ class Program {
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-3. 
+3. HOLLOW RECTANGLE 
+
+using System;
+
+class Program {
+  public static void Main (string[] args) 
+  {
+    Console.WriteLine("Please enter number of rows");
+    int r = Convert.ToInt32(Console.ReadLine());
+    
+    for(int row = 0; row < r ; row++)
+    {
+      if(row == 0 || row == r-1){
+        for (int col = 0; col < r+1 ; col++){
+           Console.Write ("*");
+           Console.Write (" ");
+        }  
+      }      
+        else{
+           Console.Write ("*");
+           Console.Write (" ");
+           for(int space =0 ; space < (r+1) - 2 ; space++){
+             Console.Write (" ");
+             Console.Write (" ");
+          }
+          Console.Write ("*");
+        }
+      Console.WriteLine (" ");
+      }      
+    }
+}
