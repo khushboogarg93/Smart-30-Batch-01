@@ -294,5 +294,63 @@ class Program {
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-11. Numeric HOLLOW PYRAMID
+11. SOLID DIAMOND
 
+using System;
+
+class Program {
+  public static void Main (string[] args) 
+  {
+    Console.WriteLine("Please enter number of rows");
+    int r = Convert.ToInt32(Console.ReadLine());
+
+    //Upper portion
+    for(int row = 0 ; row < r ; row++)
+    {
+        //left portion
+        for(int space =0; space < r - row; space++){
+          Console.Write (" ");
+          Console.Write (" ");
+        }
+         for(int k =0; k < row ; k++){
+            Console.Write ("*");
+            Console.Write (" ");
+        }
+      
+        // right portion      
+        for(int col = 0; col < row+1 ; col++){
+           Console.Write ("*");
+           Console.Write (" ");
+        }
+      Console.WriteLine (" ");
+    }
+
+    //Lower portion
+    for(int row = 0 ; row < r ; row++)
+    {    
+      if(row !=0 ){
+         Console.Write (" ");
+         Console.Write (" ");
+        for(int space =0; space < row; space++){
+            Console.Write (" ");
+            Console.Write (" ");
+        }
+         for(int k =0; k < (r-1) - row ; k++){
+            Console.Write ("*");
+            Console.Write (" ");
+        }
+      
+        // right portion       
+        for(int col = 0; col < r - row ; col++){
+           Console.Write ("*");
+           Console.Write (" ");
+        }
+        Console.WriteLine (" ");
+      }      
+    }      
+  }
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+12. HOLLOW DIAMOND
