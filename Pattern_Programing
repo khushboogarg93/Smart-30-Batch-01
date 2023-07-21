@@ -354,3 +354,78 @@ class Program {
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 12. HOLLOW DIAMOND
+
+using System;
+
+class Program {
+  public static void Main (string[] args) 
+  {
+    Console.WriteLine("Please enter number of rows");
+    int r = Convert.ToInt32(Console.ReadLine());
+
+    //Upper Pattern 
+    for(int row = 0 ; row < r ; row++)
+    {
+      //Upper left portion
+      for(int sp1 = 0; sp1< (r-1)-row ;sp1++){
+         Console.Write (" ");
+         Console.Write (" ");
+      }
+       if(row !=0){
+         Console.Write ("*");
+         for(int sp2=0; sp2< row; sp2++){
+           Console.Write (" ");
+           Console.Write (" ");
+         }
+      }   
+          
+        // Upper right portion      
+        for(int spaceLeft = 0; spaceLeft < row ; spaceLeft++){
+           Console.Write (" ");
+           Console.Write (" ");
+        }
+      Console.Write ("*");
+      Console.WriteLine (" ");
+    } 
+
+     //Inverted Pattern
+    for(int row = 0; row< r-1; row++){
+        // left 
+        for(int spl1 =0 ; spl1< row + 1; spl1++){
+           Console.Write (" ");
+           Console.Write (" ");
+      }
+      if(row < r-2)
+      {
+        Console.Write ("*");
+        Console.Write (" ");
+      }
+
+      if(row == 0){
+        Console.Write (" ");
+        Console.Write (" ");
+        Console.Write (" ");
+        Console.Write (" ");
+      }
+
+      if(row == 1){
+        Console.Write (" ");
+        Console.Write (" ");
+      }
+      // right
+      for(int spr =0 ; spr< (r-2)-row; spr++){
+           Console.Write (" ");
+           Console.Write (" ");
+      }
+      Console.Write ("*");
+       Console.WriteLine (" ");
+    }    
+  }
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+13. FLIPPED SOLID DIAMOND
+
+
+
