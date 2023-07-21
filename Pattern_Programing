@@ -122,4 +122,53 @@ class Program {
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+6. NUMERIC HALF PYRAMID
+
+using System;
+
+class Program {
+  public static void Main (string[] args) 
+  {
+    Console.WriteLine("Please enter number of rows");
+    int r = Convert.ToInt32(Console.ReadLine());
+    
+    for(int row = 1 ; row <= r ; row++)
+    {
+        for(int col = 1; col <= row ; col++){
+           Console.Write (col);
+           Console.Write (" ");
+        }
+      Console.WriteLine (" ");
+    }      
+  }
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+7. NUMERIC HALF PYRAMID
+
+using System;
+
+class Program {
+  public static void Main (string[] args) 
+  {
+    Console.WriteLine("Please enter number of rows");
+    int r = Convert.ToInt32(Console.ReadLine());
+    
+    for(int row = 1 ; row <= r ; row++)
+    {
+        for(int col = 1; col <= row ; col++){
+           Console.Write (col);
+           Console.Write (" ");
+        }
+      Console.WriteLine (" ");
+    }      
+  }
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+8. INVERTED NUMERIC HALF PYRAMID
+
+
 
