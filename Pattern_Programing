@@ -73,3 +73,26 @@ class Program {
       }      
     }
 }
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+4. HALF PYRAMID 
+
+using System;
+
+class Program {
+  public static void Main (string[] args) 
+  {
+    Console.WriteLine("Please enter number of rows");
+    int r = Convert.ToInt32(Console.ReadLine());
+    
+    for(int row = 0; row < r ; row++)
+    {
+        for(int col = 0; col < row+1; col++){
+           Console.Write ("*");
+           Console.Write (" ");
+        }
+      Console.WriteLine (" ");
+    }      
+  }
+}
