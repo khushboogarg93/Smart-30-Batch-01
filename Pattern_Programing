@@ -427,5 +427,60 @@ class Program {
 
 13. FLIPPED SOLID DIAMOND
 
+using System;
+
+class Program {
+  public static void Main (string[] args) 
+  {
+    Console.WriteLine("Please enter number of rows");
+    int r = Convert.ToInt32(Console.ReadLine());
+
+    // Upper Left
+    for(int i=0; i<r; i++){
+      for(int j=0; j<r-i; j++){
+        Console.Write("*");
+        Console.Write(" ");
+      }
+
+      // Upper Right with middle spaces
+      for(int s=0; s<2*i; s++){
+        Console.Write(" ");
+        Console.Write(" ");   
+      }
+      for(int st=0; st<r-i; st++){
+        Console.Write("*");
+        Console.Write(" ");   
+      }
+      
+      Console.WriteLine(" ");
+    }
+
+     // Lower Left
+    for(int i=0; i<r; i++){
+      for(int j=0; j< i+1 ; j++){
+        Console.Write("*");
+        Console.Write(" ");
+      }
+
+      // lower Right with middle spaces
+      for(int s=0; s<2 * (r-(i+1)); s++){
+        Console.Write(" ");
+        Console.Write(" ");   
+      }
+      for(int st=0; st<i+1; st++){
+        Console.Write("*");
+        Console.Write(" ");   
+      }
+      
+      Console.WriteLine(" ");
+    }
+  }
+}
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+14. FANCY PATTERN 
+
 
 
