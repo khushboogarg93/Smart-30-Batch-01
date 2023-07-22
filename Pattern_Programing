@@ -482,5 +482,55 @@ class Program {
 
 14. FANCY PATTERN 
 
+using System;
+
+class Program {
+  public static void Main (string[] args) 
+  {
+    Console.WriteLine("Please enter number of rows");
+    int r = Convert.ToInt32(Console.ReadLine());
+
+    // Upper Part
+    for(int i=0; i<r; i++)
+    {
+      int shoulBe = 2*i+1; // get odd numbers 
+      int count = 0;
+      for(int j=0; j<i+1; j++){
+        Console.Write(i+1);
+        count++;
+        Console.Write(" ");
+        if(count != shoulBe){
+          count++;
+          Console.Write("*");
+          Console.Write(" ");
+        }     
+      }   
+      Console.WriteLine(" ");
+    }
+
+        // Lower Part
+    for(int i=0; i<r; i++)
+    {
+      int shoulBe = (r-i) + (r-(i+1));
+      int count = 0;
+      for(int j=0; j<r-i; j++){
+        Console.Write(r-i);
+        count++;
+        Console.Write(" ");
+        if(count != shoulBe){
+          count++;
+          Console.Write("*");
+          Console.Write(" ");
+        }     
+      }   
+      Console.WriteLine(" ");
+    }
+    
+  }
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+15. ALPHABET PALINDROME PATTERN 
 
 
