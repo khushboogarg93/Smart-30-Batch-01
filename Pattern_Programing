@@ -764,3 +764,98 @@ class Program {
 }
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+21. SWASTIK PATTERN
+
+using System;
+
+class Program {
+  public static void Main (string[] args) 
+  {
+    Console.WriteLine("Please enter number of rows");
+    int r = Convert.ToInt32(Console.ReadLine());
+int formula =0;int spaceFormula =0;
+    
+    //Upper
+    for(int i=0; i<r; i++){  
+       if(i == r-1){
+         int print = 2*r -1;
+         for(int j=0; j< print; j++){
+           Console.Write("*");
+           Console.Write(" ");
+         }
+       }
+      else{
+        Console.Write("*");
+        Console.Write(" ");
+      }
+
+       // right
+       formula = ((2*r -1)/2)+1;
+
+        // print space
+       if(i < r-1){
+        spaceFormula = (2 * r -1) - (formula +1); 
+        for(int sl =0; sl < spaceFormula; sl++ ){
+          Console.Write(" ");
+          Console.Write(" ");       
+         }
+
+          for(int jl =0 ; jl < formula; jl++){
+            if(i == 0){
+              Console.Write("*");
+              Console.Write(" ");
+            }
+            else{
+              Console.Write("*");
+              break;
+            }
+          }
+         }
+
+      
+      Console.WriteLine(" ");
+    }
+
+
+    // Lower
+    for(int i=0; i<r -1; i++){  
+
+      // print left
+      for(int s=0; s<r-1; s++){
+        if(i != r-2){
+         Console.Write(" ");
+          Console.Write(" "); 
+          }
+        else{
+          break;
+        }
+      }
+
+      for(int st =0; st< r ; st++){
+        if(i == r-2){
+          Console.Write("*");
+          Console.Write(" "); 
+        }
+        else{
+          Console.Write("*");
+          Console.Write(" "); 
+          break;
+        }          
+      } 
+
+
+      //print left
+      for(int spacelower =0; spacelower < spaceFormula; spacelower++){
+          Console.Write(" ");
+          Console.Write(" "); 
+      }
+      Console.Write("*");
+      Console.Write(" "); 
+      
+      Console.WriteLine(" ");
+  }
+}
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
