@@ -655,4 +655,59 @@ class Program {
 
 19. PASCAL TRIANGLE PATTERN 
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program {
+  public static void Main (string[] args) 
+  {
+    Console.WriteLine("Please enter number of rows");
+    int r = Convert.ToInt32(Console.ReadLine());
+
+    var previousRow = new Dictionary<int, int>();
+    List<int> mergeCurrentWithPrevious = new List<int>();
+
+    
+    for(int i=0; i< r; i++){
+      for(int j=0; j< i+1; j++)
+      {
+        int v1 =0; int v2 =0;
+          if(i==0){
+            Console.Write(1);
+            Console.Write(" ");
+            previousRow.Add(j, 1);
+            mergeCurrentWithPrevious.Add(1);
+          }
+        else{
+
+          // take index value from current ex- j=0
+            v1 = previousRow.
+            FirstOrDefault(x => x.Key == j).Value;
+
+          if(j >=0){
+              v2 = previousRow.
+            FirstOrDefault(x => x.Key == j-1).Value;
+          }
+         
+            Console.Write(v1+v2);
+            Console.Write(" ");
+
+          mergeCurrentWithPrevious.Add(v1+v2);
+        }       
+      }   
+      previousRow.Clear();
+      for(int l=0; l<mergeCurrentWithPrevious.Count;l++){
+        previousRow.Add(l,mergeCurrentWithPrevious[l]);
+      }
+
+      mergeCurrentWithPrevious.Clear();
+      Console.WriteLine(" ");    
+    }   
+  }
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+20. BUTTERFLY PATTERN 
 
