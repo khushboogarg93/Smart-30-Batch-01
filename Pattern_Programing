@@ -533,4 +533,52 @@ class Program {
 
 15. ALPHABET PALINDROME PATTERN 
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program {
+  public static void Main (string[] args) 
+  {
+    Console.WriteLine("Please enter number of rows");
+    int r = Convert.ToInt32(Console.ReadLine());
+
+    // mapping 
+    var alphabetDecimalMapping = new Dictionary<char, int>(){
+            	{'A', 1},{'B', 2},{'C', 3},{'D', 4},{'E', 5},{'F', 6},{'G', 7},
+              {'H', 8},{'I', 9},{'J', 10},{'K', 11},{='L', 12},{'M', 13},{'N', 14},
+              {'O', 15},{'P', 16},{'Q', 17},{'R', 18},{'S', 19},{'T', 20},
+                {'U', 21},{'V', 22},{'W', 23},{'X', 24},{'Y', 25},{'Z', 26}
+    };
+    
+    // Upper Part
+    for(int i=0; i<r; i++)
+    {
+      int lengthForRp = (i+1) - 1;
+      for(int j=0; j<i+1 ; j++){
+
+        var lPatternKey = alphabetDecimalMapping.
+        FirstOrDefault(x => x.Value ==   (j+1)).Key;
+        
+        Console.Write(lPatternKey);
+        Console.Write(" ");      
+      }
+       // for right pattern
+        for(int k =0; k<lengthForRp ; k++){
+          
+        var rPatternKey = alphabetDecimalMapping.
+        FirstOrDefault(x => x.Value ==   (lengthForRp-k)).Key;
+          
+           Console.Write(rPatternKey);
+           Console.Write(" ");
+        }
+      Console.WriteLine(" ");    
+    }  
+  }
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+16. SOLID SQUARE PATTERN 
+
 
