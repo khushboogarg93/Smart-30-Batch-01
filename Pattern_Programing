@@ -710,4 +710,57 @@ class Program {
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 20. BUTTERFLY PATTERN 
+using System;
 
+class Program {
+  public static void Main (string[] args) 
+  {
+    Console.WriteLine("Please enter number of rows");
+    int r = Convert.ToInt32(Console.ReadLine());
+
+    //Upper
+    for(int i=0; i<r; i++){
+      for(int j=0; j<i+1; j++){
+        Console.Write("*");
+        Console.Write(" ");
+      }
+
+      //space
+      for(int s=0; s<2 * (r - (i+1)) ; s++){
+        Console.Write(" ");
+        Console.Write(" ");
+      }
+
+      //Print *
+      for(int st=0; st < i+1; st++){
+        Console.Write("*");
+        Console.Write(" ");
+      }
+      Console.WriteLine(" ");
+    }
+
+    //Lower
+    for(int i=0; i<r; i++){
+      for(int j=0; j<r-i; j++){
+        Console.Write("*");
+        Console.Write(" ");
+      }
+
+      //space
+      for(int sl=0; sl<2 * i ; sl++){
+        Console.Write(" ");
+        Console.Write(" ");
+      }
+
+      //Print *
+      for(int stl=0; stl < r-i; stl++){
+        Console.Write("*");
+        Console.Write(" ");
+      }
+      Console.WriteLine(" ");
+    }
+      
+  }
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
